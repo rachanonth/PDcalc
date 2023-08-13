@@ -157,7 +157,7 @@ h2 {
 .button-4:-webkit-details-marker {
   display: none;
 }
-background-color: #fafafa;
+background-color:#fafafa;
 opacity: 0.4;
 background-image:  radial-gradient(#f7bd45 1.05px, transparent 1.05px), radial-gradient(#f7bd45 1.05px, #fafafa 1.05px);
 background-size: 42px 42px;

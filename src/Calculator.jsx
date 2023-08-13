@@ -12,6 +12,7 @@ const Calculator = () => {
     { value: 'amx125', label: 'Amoxicillin 125mg/5ml', mkdose: 15,volume: 25, interval: 'q8 hr or TID ', ref:'mdx',},
     { value: 'amx250', label: 'Amoxicillin 250mg/5ml', mkdose: 15,volume: 50, interval: 'q8 hr or TID ', ref:'mdx',},
     { value: 'amx250h', label: 'Amoxicillin 250mg/5ml (high dose)', mkdose: 30,volume: 50, interval: 'q8 hr or TID ', ref:'mdx',},
+    { value: 'amxc1200', label: 'Inj - Amox/clav 1.2 g in NSS 100 ml', mkdose: 45,volume: 12, interval: 'q12 hr', ref:'mdx',},
      { value: 'cpm4', label: 'CPM 4mg/5ml', mkdose: 0.35,volume: 0.8, interval: 'TID - QID ', ref:'mdx',},
      { value: 'ibp100', label: 'Ibuprofen 100mg/5ml', mkdose: 5,volume: 20, interval: 'PRN q6 - 8 hr ', ref:'mdx',},
     { value: 'pcm120', label: 'Paracetamol 120mg/5ml', mkdose: 10, volume: 24, interval: 'PRN q4 - 6 hr', ref:'mdx',},
