@@ -1,12 +1,14 @@
 body {
   font-family: Gill Sans,Gill Sans MT,Calibri,Trebuchet MS,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: left;
-    color: #2c3e50;
-  background-color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  line-height: 1.25;
+  color: #333;
+  background-color: #f5f5f5;
   margin: 2;
   padding: 0;
+  box-sizing: border-box;
 }
 .container {
   max-width: 500px;
@@ -32,11 +34,15 @@ h2 {
     border-bottom: 1px solid
 }
 .dose {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 2px;
 }
 .note {
   font-size: 12px;
+}
+.warning {
+  font-size: 12px;
+  color: #d62e69;
 }
 
 .label {
@@ -157,8 +163,7 @@ h2 {
 .button-4:-webkit-details-marker {
   display: none;
 }
-background-color:#fafafa;
-opacity: 0.4;
-background-image:  radial-gradient(#f7bd45 1.05px, transparent 1.05px), radial-gradient(#f7bd45 1.05px, #fafafa 1.05px);
-background-size: 42px 42px;
-background-position: 0 0,21px 21px;
+.footer {
+  background-color: lightgray;
+  padding: 10px;
+}
