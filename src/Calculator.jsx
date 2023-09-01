@@ -39,6 +39,12 @@ const handleCalculate = () => {
           const dose = parseFloat(weight) * selectedMed.mkdose;
           calculatedDose = dose.toFixed(0) + " mg/dose (" +selectedMed.mkdose +" mg/kg/dose)";
           calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " cap/tab  "+ selectedMed.interval;
+          } else if (selectedMed.type === "tabrange") {
+          // Calculation logic for syr show  range dose
+          const mindose = parseFloat(weight) * selectedMed.mindose;
+          const maxdose = parseFloat(weight) * selectedMed.maxdose;
+          calculatedDose = mindose.toFixed(0)+ " - " +  maxdose.toFixed(0) +" mg/dose (" +selectedMed.mindose + " - " + selectedMed.maxdose + " mg/kg/dose)";
+          calculatedVolume = "Oral " + (mindose / selectedMed.volume).toFixed(1) + " - " + (maxdose / selectedMed.volume).toFixed(1) + " cap/tab  " + selectedMed.interval;
         } else if (selectedMed.type === "inj") {
           // Calculation logic for injection type
           const dose = parseFloat(weight) * selectedMed.mkdose;
@@ -73,7 +79,7 @@ return (
           onChange={(e) => setWeight(e.target.value)}
           onFocus={() => setWeight("")} // Set the weight to an empty string on focus
           className="weight-input" 
-          inputMode="numeric"
+          inputMode="decimal"
         /> kg
           </p>
         <input
