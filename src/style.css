@@ -21,7 +21,7 @@ body {
 
 a:active,a:hover,a:link,a:visited {
     text-decoration: none;
-    color: #5b718a
+    color: #79AC78
 }
 h2 {
   font-size: 24px;
@@ -30,7 +30,7 @@ h2 {
 .title {
     font-size: 20px;
     margin-top: 10px;
-    color: #364f6b;
+    color: #618264;
     border-bottom: 1px solid
 }
 .dose {
@@ -164,6 +164,38 @@ h2 {
   display: none;
 }
 .footer {
-  background-color: lightgray;
-  padding: 10px;
+  background-color: #D0E7D2;
+  padding: 2px;
+  font-size: 12px;
+}
+/* Drug name style */
+.drug-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Dosage style */
+.dosage {
+  font-size: 1.2em;
+}
+
+/* Container for the list */
+.dosage-list {
+  margin-top: 20px;
+}
+.dosage-list li {
+  margin-bottom: 1px;
+  padding: 5px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e2e2
+}
+.dosage-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

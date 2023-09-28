@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-import medicationOptions from './Medication';
+import medicationOptions from './Medicationplus';
 import Footer from './Footer';
 import {Link} from "react-router-dom";
 
@@ -78,8 +78,8 @@ const Calculator = () => {
 
   return (
     <div>
-      <h2 className="title">🧒Peddose</h2> 
-      <p>Basic | <Link to="plus">➕Plus</Link> | <Link to="emerdrug">🚑Emer</Link></p>
+       <h2 className="title">🧒Peddose Plus</h2> 
+      <p><Link to="/">Basic</Link> | ➕Plus </p>
       <label>
         <p>Weight:
           <input
@@ -91,14 +91,7 @@ const Calculator = () => {
             inputMode="decimal"
           /> kg
         </p>
-        <input
-          type="range"
-          min="3"
-          max="50"
-          step="0.5"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-        />
+        
 
       </label>
       <label>
