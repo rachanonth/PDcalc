@@ -7,7 +7,7 @@ import {
 import Calculator from './Calculator';
 import Calculatorplus from './Calcplus';
 import Emerdrug from './EmergencyDrugCalculator';
-import Emoji from './Emoji';
+import Cguide from './Cguide';
 import './style.css';
 
 const router = createBrowserRouter([
@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "emo",
+    path: "cguide",
     element: (
       <div>
-        {<Emoji />}
+        {<Cguide />}
       </div>
     ),
   },

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import medicationOptions from './Medicationplus';
 import Footer from './Footer';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Calculator = () => {
   const [weight, setWeight] = useState(10); // Default weight value
@@ -36,11 +36,21 @@ const Calculator = () => {
         // Calculation logic for syr by age type
         calculatedDose = "Dose by age";
         calculatedVolume = selectedMed.note;
+      } else if (selectedMed.type === "favi") {
+        const dose1 = parseFloat(weight) * 35;
+        const dose2 = parseFloat(weight) * 15;
+        calculatedDose = "Day 1: 70 mg/kg/day, Day 2-5: 30mg/kg/day";
+        calculatedVolume = "Day 1: "+ dose1.toFixed(0) + " mg BID then Day 2-5: " + dose2.toFixed(0) + " mg BID";
       } else if (selectedMed.type === "tab") {
         // Calculation logic for tablet type
         const dose = parseFloat(weight) * selectedMed.mkdose;
         calculatedDose = dose.toFixed(0) + " mg/dose (" + selectedMed.mkdose + " mg/kg/dose)";
         calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " cap/tab  " + selectedMed.interval;
+        } else if (selectedMed.type === "sac") {
+          // Calculation logic for sac
+          const dose = parseFloat(weight) * selectedMed.mkdose;
+          calculatedDose = dose.toFixed(0) + " mg/dose (" + selectedMed.mkdose + " mg/kg/dose)";
+          calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " sac  " + selectedMed.interval;
       } else if (selectedMed.type === "tabrange") {
         // Calculation logic for syr show  range dose
         const mindose = parseFloat(weight) * selectedMed.mindose;
@@ -78,7 +88,7 @@ const Calculator = () => {
 
   return (
     <div>
-       <h2 className="title">🧒Peddose Plus</h2> 
+      <h2 className="title">🧒Peddose Plus</h2>
       <p><Link to="/">Basic</Link> | ➕Plus </p>
       <label>
         <p>Weight:
@@ -91,7 +101,7 @@ const Calculator = () => {
             inputMode="decimal"
           /> kg
         </p>
-        
+
 
       </label>
       <label>
