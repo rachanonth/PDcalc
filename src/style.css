@@ -199,3 +199,13 @@ h2 {
   padding: 0;
   margin: 0;
 }
+.line1 {
+  font-style: italic; /* Different style for distinction */
+  margin-left: 10px; /* Slight indentation for better readability */
+  color: #555; /* Softer color for secondary text */
+}
+.line2 {
+  font-weight: bold; /* Emphasize line2 */
+  color: #3734df; /* Darker color for emphasis */
+  margin-left: 10px; /* Slight indentation for better readability */
+}

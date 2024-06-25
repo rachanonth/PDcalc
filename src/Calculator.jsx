@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import medicationOptions from './Medication';
 import Footer from './Footer';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Calculator = () => {
   const [weight, setWeight] = useState(10); // Default weight value
@@ -41,11 +41,11 @@ const Calculator = () => {
         const dose = parseFloat(weight) * selectedMed.mkdose;
         calculatedDose = dose.toFixed(0) + " mg/dose (" + selectedMed.mkdose + " mg/kg/dose)";
         calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " cap/tab  " + selectedMed.interval;
-        } else if (selectedMed.type === "sac") {
-          // Calculation logic for sac
-          const dose = parseFloat(weight) * selectedMed.mkdose;
-          calculatedDose = dose.toFixed(0) + " mg/dose (" + selectedMed.mkdose + " mg/kg/dose)";
-          calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " sac  " + selectedMed.interval;
+      } else if (selectedMed.type === "sac") {
+        // Calculation logic for sac
+        const dose = parseFloat(weight) * selectedMed.mkdose;
+        calculatedDose = dose.toFixed(0) + " mg/dose (" + selectedMed.mkdose + " mg/kg/dose)";
+        calculatedVolume = "Oral " + (dose / selectedMed.volume).toFixed(1) + " sac  " + selectedMed.interval;
       } else if (selectedMed.type === "tabrange") {
         // Calculation logic for syr show  range dose
         const mindose = parseFloat(weight) * selectedMed.mindose;
@@ -83,8 +83,8 @@ const Calculator = () => {
 
   return (
     <div>
-      <h2 className="title">🧒Peddose</h2> 
-      <p>Basic | <Link to="plus">➕Plus</Link> | <Link to="emerdrug">🚑Emer</Link> | <a href="https://tbdrugcalc.web.app/pedcalc">TB Drug</a> </p>
+      <h2 className="title">🧒Peddose</h2>
+      <p>Basic | <Link to="plus">➕Plus</Link> | <Link to="calcpack">Set</Link> | <Link to="emerdrug">🚑Emer</Link> | <a href="https://tbdrugcalc.web.app/pedcalc">TB Drug</a> </p>
       <label>
         <p>Weight:
           <input

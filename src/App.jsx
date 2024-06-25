@@ -8,6 +8,7 @@ import Calculator from './Calculator';
 import Calculatorplus from './Calcplus';
 import Emerdrug from './EmergencyDrugCalculator';
 import Cguide from './Cguide';
+import Calcpack from './Calcpack';
 import './style.css';
 
 const router = createBrowserRouter([
@@ -24,6 +25,15 @@ const router = createBrowserRouter([
     element: (
       <div>
         {<Cguide />}
+      </div>
+    ),
+  },
+  ,
+  {
+    path: "calcpack",
+    element: (
+      <div>
+        {<Calcpack />}
       </div>
     ),
   },
