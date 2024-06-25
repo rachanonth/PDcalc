@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import { Link } from "react-router-dom";
-import medicationOptions from './Medicationplus';
+import medicationOptions from './Medication';
 
 const DrugsetCalculator = () => {
   const [weight, setWeight] = useState('10');
