@@ -84,7 +84,7 @@ const Calculator = () => {
   return (
     <div>
       <h2 className="title">🧒Peddose</h2>
-      <p>Basic | <Link to="plus">➕Plus</Link> | <Link to="calcpack">Set</Link> | <Link to="emerdrug">🚑Emer</Link> | <a href="https://tbdrugcalc.web.app/pedcalc">TB Drug</a> </p>
+      <p>Basic | <Link to="plus">➕Plus</Link> | <Link to="calcpack">📋 Package</Link> | <Link to="emerdrug">🚑Emer</Link> | <a href="https://tbdrugcalc.web.app/pedcalc">TB Drug</a> </p>
       <label>
         <p>Weight:
           <input

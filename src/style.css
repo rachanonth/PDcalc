@@ -1,17 +1,19 @@
+/* Base styles */
 body {
-  font-family: Gill Sans,Gill Sans MT,Calibri,Trebuchet MS,sans-serif;
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   line-height: 1.25;
   color: #333;
   background-color: #f5f5f5;
-  margin: 2;
+  margin: 2px;
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
-  max-width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
@@ -19,193 +21,193 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-a:active,a:hover,a:link,a:visited {
-    text-decoration: none;
-    color: #79AC78
-}
+/* Typography */
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 .title {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #618264;
-    border-bottom: 1px solid
-}
-.dose {
   font-size: 20px;
-  margin-bottom: 2px;
-}
-.note {
-  font-size: 12px;
-}
-.warning {
-  font-size: 12px;
-  color: #d62e69;
+  margin-top: 10px;
+  color: #618264;
+  border-bottom: 1px solid;
 }
 
-.label {
-  display: block;
-  margin-bottom: 10px;
+a:active, a:hover, a:link, a:visited {
+  text-decoration: none;
+  color: #79AC78;
 }
+
+/* Input styles */
+.input-group {
+  margin-bottom: 15px;
+}
+
 .weight-input {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    width: 80px;
-    color: #364f6b;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px thin #4f9bb2
-}
-
-.input-container {
-  display: flex;
-  align-items: center;
-}
-
-.range-input {
-  flex: 1;
-}
-
-.number-input {
-  width: 10px;
-  margin-left: 10px;
-  padding: 5px;
-}
-
-.select-input {
-  width: 80%;
-  margin-top: 5x;
-}
-
-.result-container {
-  margin-top: 20px;
-}
-
-.result {
   font-size: 20px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  width: 80px;
+  color: #364f6b;
+  border: none;
+  border-bottom: 1px solid #4f9bb2;
 }
-
-
-.result-history {
-  margin-top: 20px;
-}
-
-.result-item {
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
+.minimalist-select {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+  overflow: auto;
+  min-height: 100px;
+  max-height: 300px;
+  position: relative;
 }
 
-.result-item p {
-  margin: 5px 0;
+.minimalist-select::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, transparent 50%, #ddd 50%);
+  cursor: ns-resize;
 }
 
-.button-4 {
+.minimalist-select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+.minimalist-select,
+.minimalist-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.button-4,
+.minimalist-button {
   appearance: none;
   background-color: #FAFBFC;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
   color: #24292E;
   cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  list-style: none;
   padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
+  transition: background-color 0.2s;
 }
 
-.button-4:hover {
+.button-4:hover,
+.minimalist-button:hover {
   background-color: #F3F4F6;
-  text-decoration: none;
-  transition-duration: 0.1s;
 }
 
-.button-4:disabled {
-  background-color: #FAFBFC;
-  border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
-  cursor: default;
+.minimalist-button.active {
+  background-color: #d0d0d0;
 }
 
-.button-4:active {
-  background-color: #EDEFF2;
-  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-  transition: none 0s;
+.calculate-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
 }
 
-.button-4:focus {
-  outline: 1px transparent;
+.calculate-button:hover {
+  background-color: #45a049;
 }
 
-.button-4:before {
-  display: none;
+/* Layout */
+.layout-buttons {
+  margin-bottom: 20px;
 }
 
-.button-4:-webkit-details-marker {
-  display: none;
+/* Dosage list styles */
+.dosage-list {
+  list-style-type: none;
+  padding: 0;
 }
+
+.dosage-list.column-1 { column-count: 1; }
+.dosage-list.column-2 { column-count: 2; }
+.dosage-list.column-3 { column-count: 3; }
+
+.dosage-list.column-2,
+.dosage-list.column-3 {
+  column-gap: 20px;
+}
+
+.drug-item {
+  break-inside: avoid-column;
+  margin-bottom: 1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.drug-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drug-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.drug-details {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.line1, .line2 {
+  margin: 5px 0;
+}
+
+.line1 {
+  font-weight: 500;
+}
+
+.line2 {
+  color: #555;
+}
+
+/* Utility classes */
+.warning {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Footer */
 .footer {
   background-color: #D0E7D2;
   padding: 2px;
   font-size: 12px;
-}
-/* Drug name style */
-.drug-name {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-/* Dosage style */
-.dosage {
-  font-size: 1.2em;
-}
-
-/* Container for the list */
-.dosage-list {
-  margin-top: 20px;
-}
-.dosage-list li {
-  margin-bottom: 1px;
-  padding: 5px;
-  border: 0px solid #ccc;
-  border-radius: 5px;
-  background-color: #f7f7f7;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e4e2e2
-}
-.dosage-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.line1 {
-  font-style: italic; /* Different style for distinction */
-  margin-left: 10px; /* Slight indentation for better readability */
-  color: #555; /* Softer color for secondary text */
-}
-.line2 {
-  font-weight: bold; /* Emphasize line2 */
-  color: #3734df; /* Darker color for emphasis */
-  margin-left: 10px; /* Slight indentation for better readability */
 }
