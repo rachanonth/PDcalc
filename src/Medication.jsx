@@ -39,6 +39,8 @@ const medicationOptions = [
   { value: 'dom10', label: 'Domperidone 10 mg tab', mindose: 0.2, maxdose: 0.4, mkdose: 0.3, volume: 10, interval: 'AC TID-QID ', type: 'tabrange', ref: 'dpcKKU', warning: ' - ', },
   { value: 'dph50', label: 'Diphenhydramine 50 mg tab', mindose: 0.2, maxdose: 0.4, mkdose: 1.25, volume: 50, interval: 'QID ', type: 'tab', ref: 'dpcKKU', warning: ' 25 - 50 mg/dose at bedtime for sleep induction ', },
   { value: 'fxf6', label: 'Fexofenadine 30mg/5ml syr', mkdose: 0, volume: 0, interval: ' ', type: 'syrbyage', ref: 'dpcKKU', note: '6 m -2 y: 2.5 mL BID \n2-11 y: 5 mL BID \n>12 y: 10 mL BID', warning: ' - ', },
+   { value: 'gg2', label: 'Guaifenesin 100mg/5ml syr (< 2 y)', mindose: 2.5, maxdose: 5, mkdose: 0, volume: 20, interval: 'QID ', type: 'syrrange', ref: 'dpcKKU', warning: '-', },
+  { value: 'gg100', label: 'Guaifenesin 100mg/5ml syr', mkdose: 0, volume: 0, interval: ' ', type: 'syrbyage', ref: 'dpcKKU', note: '2 - 6 y: 2.5 mL QID \n6-12 y: 5 mL QID \n>12 y: 10 mL QID', warning: ' - ', },
   { value: 'hdx10', label: 'Hydroxyzine (Atarax) 10mg/5ml syr', mkdose: 0.6, volume: 2, interval: 'q6 hr ', type: 'syr', ref: 'dpcKKU', warning: ' - ', },
   { value: 'ibp100', label: 'Ibuprofen 100mg/5ml syr', mindose: 7, maxdose: 10, mkdose: 5, volume: 20, interval: 'PRN q6 - 8 hr ', type: 'syrrange', ref: 'dpcKKU, emc', warning: ' - ', },
   { value: 'ibp200', label: 'Ibuprofen 200mg tab', mindose: 7, maxdose: 10, mkdose: 5, volume: 200, interval: 'PRN q6 - 8 hr ', type: 'tabrange', ref: 'dpcKKU, emc', warning: ' - ', },

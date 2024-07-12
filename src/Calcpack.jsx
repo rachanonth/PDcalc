@@ -89,7 +89,7 @@ const DrugsetCalculator = () => {
 
   return (
     <div className="container">
-      <h2 className="title">🧒Medication Package</h2>
+      <h2 className="title">🧒Peddose Package</h2>
       <p><Link to="/">Basic</Link> |📋 Package</p>
 
       <div className="input-group">
