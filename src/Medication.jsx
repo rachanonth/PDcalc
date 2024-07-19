@@ -55,6 +55,7 @@ const medicationOptions = [
   { value: 'pcm240', label: 'Paracetamol 250mg/5ml syr', mindose: 10, maxdose: 15, mkdose: 10, volume: 50, interval: 'PRN q4 - 6 hr', type: 'syrrange', ref: 'mdx', warning: ' max 4 g/day ', },
   { value: 'pcm325', label: 'Paracetamol 325 mg tab', mindose: 10, maxdose: 15, mkdose: 10, volume: 325, interval: 'PRN q4 - 6 hr', type: 'tabrange', ref: 'mdx', warning: ' max 4 g/day ', },
   { value: 'pcm500', label: 'Paracetamol 500 mg tab', mindose: 10, maxdose: 15, mkdose: 10, volume: 500, interval: 'PRN q4 - 6 hr', type: 'tabrange', ref: 'mdx', warning: ' max 4 g/day ', },
+  { value: 'pde', label: 'Pseudoephedrine 30mg/5ml syr', mkdose: 1, volume: 6, interval: 'TID - QID ', type: 'syr', ref: 'dpcKKU', note: '-', warning: ' Max: 120 mg/day ', },
   { value: 'rcc', label: 'Racecadotril (Hidrasec 10 mg Sac)', mkdose: 1.5, volume: 10, interval: 'TID ', type: 'sac', ref: 'MIMS', warning: 'Treatment should not exceed 7 days', },
   { value: 'sbt2', label: 'Salbutamol 2mg/5ml syr ', mkdose: 0.1, volume: 0.4, interval: 'q6 hr ', type: 'syr', ref: 'dpcKKU', warning: 'max 2 mg/dose ', },
   { value: 'smt3', label: 'Dioctahedral smectite (Smecta) powder 3 g', mkdose: 0, volume: 0, interval: ' ', type: 'syrbyage', ref: 'dpcKKU', note: '<=1 y: 2 sachets a day for 3 days then 1 sachet a day \n>1 y: 4 sachets a day for 3 days then 2 sachets a day', warning: ' - ', },
