@@ -1,0 +1,157 @@
+/* iOS-style Bottom Navigation */
+.ios-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.ios-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ios-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ios-nav-item {
+  flex: 1;
+  position: relative;
+}
+
+.ios-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px 12px 4px;
+  color: #8e8e93;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 50px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ios-nav-link:hover {
+  color: #007aff;
+}
+
+.ios-nav-link:active {
+  transform: scale(0.95);
+}
+
+.ios-nav-link-active {
+  color: #007aff;
+  font-weight: 600;
+}
+
+.ios-nav-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.ios-nav-link-active .ios-nav-icon {
+  transform: scale(1.1);
+}
+
+.ios-nav-text {
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.ios-nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #007aff;
+  border-radius: 50%;
+  animation: iosIndicator 0.3s ease-out;
+}
+
+@keyframes iosIndicator {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .ios-nav-container {
+    padding: 0 10px;
+  }
+  
+  .ios-nav-link {
+    padding: 6px 2px 10px 2px;
+    font-size: 0.7rem;
+  }
+  
+  .ios-nav-icon {
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+  }
+  
+  .ios-nav-text {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ios-nav-link {
+    padding: 5px 1px 8px 1px;
+  }
+  
+  .ios-nav-icon {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+  }
+  
+  .ios-nav-text {
+    font-size: 0.6rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ios-navigation {
+    background: rgba(28, 28, 30, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ios-nav-link {
+    color: #8e8e93;
+  }
+  
+  .ios-nav-link-active {
+    color: #0a84ff;
+  }
+  
+  .ios-nav-indicator {
+    background: #0a84ff;
+  }
+} 
