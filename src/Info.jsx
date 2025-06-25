@@ -43,6 +43,14 @@ const Info = () => {
             >
               👨‍⚕️ KMP (Keep Moving Pharmacist)
             </a>
+            <a 
+              href="https://peddosev1.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="info-link"
+            >
+              Peddose V1
+            </a>
           </div>
         </section>
         
