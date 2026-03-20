@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/kurapika/Documents/GitHub/PDcalc -name *firebase* -o -name .firebase*)"
+    ]
+  }
+}
