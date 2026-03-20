@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "firebase": "^10.1.0",
     "react-javascript": "file:",
     "react-router-dom": "^6.15.0",
