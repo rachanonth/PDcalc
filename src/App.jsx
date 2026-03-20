@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 import Calculatorplus from './Calcplus';
 import Emerdrug from './EmergencyDrugCalculator';
 import Calcpack from './Calcpack';
@@ -50,7 +51,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Analytics />
+    </>
+  );
 };
 
 export default App;
