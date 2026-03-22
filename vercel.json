@@ -28,6 +28,18 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/tool/:path*",
+      "destination": "https://tool.peddose.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/tool",
+      "destination": "https://tool.peddose.com/",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
