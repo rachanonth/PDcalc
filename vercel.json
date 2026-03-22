@@ -28,13 +28,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/tool",
-      "destination": "https://kmptoolbox.vercel.app/",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
