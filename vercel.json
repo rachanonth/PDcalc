@@ -31,7 +31,7 @@
   "redirects": [
     {
       "source": "/tool",
-      "destination": "https://kmptoolbox.vercel.app/",
+      "destination": "https://tool.peddose.com/",
       "permanent": false
     }
   ],
