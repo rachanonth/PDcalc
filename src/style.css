@@ -130,6 +130,22 @@ body {
   margin-top: 8px;
 }
 
+.calcplus-affiliate-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.calcplus-affiliate-link a {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  text-decoration: none;
+}
+
+.calcplus-affiliate-link a:hover {
+  color: #718096;
+  text-decoration: underline;
+}
+
 .calcplus-btn {
   background: #3182ce;
   color: #fff;
