@@ -262,6 +262,11 @@ const DrugsetCalculator = () => {
             <button className="calcplus-btn" onClick={calculateDoses}>Calculate</button>
             <button className="calcplus-btn calcplus-btn-secondary" onClick={clearAllData}>Clear All</button>
           </div>
+          <div className="calcplus-affiliate-link">
+            <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">
+              📚 หนังสือคู่มือการใช้ยาในเด็ก
+            </a>
+          </div>
         </section>
         {results.length > 0 && (
           <section className="calcplus-section calcplus-results-section">

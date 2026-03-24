@@ -180,6 +180,11 @@ const Calculator = () => {
             <button className="calcplus-btn" onClick={handleCalculate}> Calculate</button>
             <button className="calcplus-btn calcplus-btn-secondary" onClick={handleClearHistory}>↻ Clear</button>
           </div>
+          <div className="calcplus-affiliate-link">
+            <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">
+              📚 หนังสือคู่มือการใช้ยาในเด็ก
+            </a>
+          </div>
         </section>
         {resultHistory.length > 0 && (
           <section className="calcplus-section calcplus-results-section">
