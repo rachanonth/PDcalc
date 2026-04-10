@@ -183,15 +183,6 @@
   }
 }
 
-/* Support button — reset button defaults */
-.ios-nav-support-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-family: inherit;
-}
-
 /* ── Dark mode ────────────────────────────────────────── */
 [data-theme="dark"] .ios-navigation {
   background: rgba(15, 23, 42, 0.92);
