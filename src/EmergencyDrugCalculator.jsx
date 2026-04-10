@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import drugs from './Medicationemer';
 
+const WEIGHT_STORAGE_KEY = 'peddose_weight';
+
+const getInitialWeight = () => {
+  const saved = localStorage.getItem(WEIGHT_STORAGE_KEY);
+  const parsed = parseFloat(saved);
+  return (!isNaN(parsed) && parsed > 0) ? parsed.toString() : '10';
+};
+
 const EmergencyDrugCalculator = () => {
-  const [weight, setWeight] = useState('10');
+  const [weight, setWeight] = useState(getInitialWeight);
   const [results, setResults] = useState([]);
 
   const handleWeightChange = (e) => {
     setWeight(e.target.value);
+    const v = parseFloat(e.target.value);
+    if (!isNaN(v) && v > 0) localStorage.setItem(WEIGHT_STORAGE_KEY, v);
   };
 
   const calculateDoses = () => {

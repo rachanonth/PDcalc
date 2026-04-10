@@ -9,7 +9,7 @@ const TYPE_GROUPS = {
 const TYPE_GROUP_KEYS = Object.keys(TYPE_GROUPS);
 const FILTER_STORAGE_KEY = 'calcpack_typeFilters';
 const MEDICATIONS_STORAGE_KEY = 'calcpack_selectedMedications';
-const WEIGHT_STORAGE_KEY = 'calcpack_weight';
+const WEIGHT_STORAGE_KEY = 'peddose_weight';
 
 const getDeviceColumns = () => {
   if (window.innerWidth < 600) return 1; // mobile
@@ -205,28 +205,13 @@ const DrugsetCalculator = () => {
   };
 
   return (
-    <div className="calcplus-app-bg">
+    <div className="calcplus-app-bg calcplus-wide">
       <header className="calcplus-header">
         <h1 className="calcplus-title">Peddose Package</h1>
         <p className="calcplus-subtitle">Multi-Drug Calculator</p>
       </header>
       <main className="calcplus-main">
         <section className="calcplus-section calcplus-input-section">
-          <div className="calcplus-form-group">
-            <label className="calcplus-label">Filter by Medication Type</label>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-              {TYPE_GROUP_KEYS.map(group => (
-                <label key={group} style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.98rem' }}>
-                  <input
-                    type="checkbox"
-                    checked={typeFilters.includes(group)}
-                    onChange={() => handleTypeFilterChange(group)}
-                  />
-                  {group}
-                </label>
-              ))}
-            </div>
-          </div>
           <div className="calcplus-form-group">
             <label htmlFor="medication-select" className="calcplus-label">Select Medications</label>
             <select
@@ -261,6 +246,22 @@ const DrugsetCalculator = () => {
           <div className="calcplus-button-group">
             <button className="calcplus-btn" onClick={calculateDoses}>Calculate</button>
             <button className="calcplus-btn calcplus-btn-secondary" onClick={clearAllData}>Clear All</button>
+          </div>
+          <div className="calcplus-filter-section">
+            <label className="calcplus-label">Medication Type</label>
+            <div className="calcplus-filter-chips">
+              {TYPE_GROUP_KEYS.map(group => (
+                <button
+                  key={group}
+                  type="button"
+                  aria-pressed={typeFilters.includes(group)}
+                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
+                  onClick={() => handleTypeFilterChange(group)}
+                >
+                  {group}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="calcplus-affiliate-link">
             <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">

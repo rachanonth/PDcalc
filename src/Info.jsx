@@ -11,41 +11,41 @@ const Info = () => {
         <section className="calcplus-section">
           <h2 className="calcplus-results-title">Quick Links</h2>
           <div className="info-links">
-            <a 
-              href="https://www.craft.me/s/N5vDLsLLtyKPO3" 
-              target="_blank" 
+            <a
+              href="https://www.craft.me/s/N5vDLsLLtyKPO3"
+              target="_blank"
               rel="noopener noreferrer"
               className="info-link"
             >
               📚 Reference
             </a>
-            <a 
-              href="https://www.facebook.com/KeepMovingPharmacist" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/KeepMovingPharmacist"
+              target="_blank"
               rel="noopener noreferrer"
               className="info-link"
             >
               🐛 Bug Report / Suggestion
             </a>
-            <a 
-              href="https://www.craft.me/s/3EKMocKUH9Ym5c" 
-              target="_blank" 
+            <a
+              href="https://www.craft.me/s/3EKMocKUH9Ym5c"
+              target="_blank"
               rel="noopener noreferrer"
               className="info-link"
             >
               📝 Changelog
             </a>
-            <a 
-              href="https://www.facebook.com/KeepMovingPharmacist" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/KeepMovingPharmacist"
+              target="_blank"
               rel="noopener noreferrer"
               className="info-link"
             >
               👨‍⚕️ KMP (Keep Moving Pharmacist)
             </a>
-            <a 
-              href="https://peddosev1.vercel.app/" 
-              target="_blank" 
+            <a
+              href="https://peddosev1.vercel.app/"
+              target="_blank"
               rel="noopener noreferrer"
               className="info-link"
             >
@@ -53,21 +53,21 @@ const Info = () => {
             </a>
           </div>
         </section>
-        
+
         <section className="calcplus-section">
           <h2 className="calcplus-results-title">Disclaimer</h2>
           <div className="info-disclaimer">
             <p>
-              ⚠️ <strong>Important:</strong> All calculations must be re-checked. 
+              ⚠️ <strong>Important:</strong> All calculations must be re-checked.
               The shown results can be different from the calculated results because of rounding.
             </p>
             <p>
-              This application is designed to assist healthcare professionals in pediatric medication dosing calculations. 
+              This application is designed to assist healthcare professionals in pediatric medication dosing calculations.
               Always verify results and follow institutional protocols.
             </p>
           </div>
         </section>
-        
+
         <section className="calcplus-section">
           <h2 className="calcplus-results-title">About</h2>
           <div className="info-about">
@@ -89,4 +89,4 @@ const Info = () => {
   );
 };
 
-export default Info; 
+export default Info;
