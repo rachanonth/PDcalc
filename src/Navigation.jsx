@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
+import SupportModal from './SupportModal';
 
 const getInitialTheme = () => {
   const saved = localStorage.getItem('peddose-theme');
@@ -11,6 +12,7 @@ const getInitialTheme = () => {
 const Navigation = () => {
   const location = useLocation();
   const [theme, setTheme] = useState(getInitialTheme);
+  const [showSupport, setShowSupport] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -47,6 +49,16 @@ const Navigation = () => {
         {theme === 'dark' ? '☀️' : '🌙'}
       </button>
 
+      {/* Support button — fixed top-left */}
+      <button
+        className="support-toggle"
+        onClick={() => setShowSupport(true)}
+        aria-label="Support Peddose"
+        title="สนับสนุน Peddose"
+      >
+        ☕
+      </button>
+
       <nav className="ios-navigation" role="navigation" aria-label="Main navigation">
         <div className="ios-nav-container">
           <ul className="ios-nav-list" role="menubar">
@@ -71,6 +83,7 @@ const Navigation = () => {
           </ul>
         </div>
       </nav>
+      <SupportModal isOpen={showSupport} onClose={() => setShowSupport(false)} />
     </>
   );
 };

@@ -469,53 +469,6 @@ body {
   border-bottom: none;
 }
 
-/* ── Support button on Info page ──────────────────────── */
-.info-support-section {
-  padding: 0;
-  overflow: hidden;
-}
-
-.info-support-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background 0.15s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.info-support-btn:hover {
-  background: #f1f5f9;
-}
-
-.info-support-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.info-support-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-}
-
-.info-support-label {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: #334155;
-}
-
-.info-support-sublabel {
-  font-size: 0.75rem;
-  color: #94a3b8;
-}
 
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -855,14 +808,3 @@ body {
   color: #94a3b8;
 }
 
-[data-theme="dark"] .info-support-btn:hover {
-  background: #334155;
-}
-
-[data-theme="dark"] .info-support-label {
-  color: #e2e8f0;
-}
-
-[data-theme="dark"] .info-support-sublabel {
-  color: #64748b;
-}

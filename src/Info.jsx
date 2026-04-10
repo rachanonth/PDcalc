@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import SupportModal from './SupportModal';
+import React from 'react';
 
 const Info = () => {
-  const [showSupport, setShowSupport] = useState(false);
-
   return (
     <div className="calcplus-app-bg">
       <header className="calcplus-header">
@@ -87,21 +84,7 @@ const Info = () => {
             </ul>
           </div>
         </section>
-
-        <section className="calcplus-section info-support-section">
-          <button
-            className="info-support-btn"
-            onClick={() => setShowSupport(true)}
-          >
-            <span className="info-support-icon">☕</span>
-            <div className="info-support-text">
-              <span className="info-support-label">สนับสนุน Peddose</span>
-              <span className="info-support-sublabel">Support the developer</span>
-            </div>
-          </button>
-        </section>
       </main>
-      <SupportModal isOpen={showSupport} onClose={() => setShowSupport(false)} />
     </div>
   );
 };
