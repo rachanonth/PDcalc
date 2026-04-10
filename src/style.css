@@ -541,3 +541,39 @@ body {
     max-width: 560px;
   }
 }
+
+/* ── Wide layout (Package page) ───────────────────────── */
+.calcplus-wide .calcplus-main {
+  max-width: 1120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .calcplus-wide .calcplus-section {
+    max-width: 100%;
+  }
+
+  .calcplus-wide .calcplus-results-section {
+    max-width: 100%;
+  }
+
+  .calcplus-wide .calcplus-result-card {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .calcplus-wide .calcplus-section {
+    max-width: 720px;
+  }
+
+  .calcplus-wide .calcplus-results-section {
+    max-width: 100%;
+  }
+
+  .calcplus-wide .calcplus-result-card {
+    max-width: 100%;
+  }
+}

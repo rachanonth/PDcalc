@@ -205,7 +205,7 @@ const DrugsetCalculator = () => {
   };
 
   return (
-    <div className="calcplus-app-bg">
+    <div className="calcplus-app-bg calcplus-wide">
       <header className="calcplus-header">
         <h1 className="calcplus-title">Peddose Package</h1>
         <p className="calcplus-subtitle">Multi-Drug Calculator</p>
@@ -213,17 +213,18 @@ const DrugsetCalculator = () => {
       <main className="calcplus-main">
         <section className="calcplus-section calcplus-input-section">
           <div className="calcplus-form-group">
-            <label className="calcplus-label">Filter by Medication Type</label>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+            <label className="calcplus-label">Medication Type</label>
+            <div className="calcplus-filter-chips">
               {TYPE_GROUP_KEYS.map(group => (
-                <label key={group} style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.98rem' }}>
-                  <input
-                    type="checkbox"
-                    checked={typeFilters.includes(group)}
-                    onChange={() => handleTypeFilterChange(group)}
-                  />
+                <button
+                  key={group}
+                  type="button"
+                  aria-pressed={typeFilters.includes(group)}
+                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
+                  onClick={() => handleTypeFilterChange(group)}
+                >
                   {group}
-                </label>
+                </button>
               ))}
             </div>
           </div>
