@@ -60,7 +60,7 @@ const SupportModal = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        <p className="support-amount">แนะนำ {AMOUNT} บาท · Suggested {AMOUNT} THB</p>
+        <p className="support-amount">ยินดีรับทุกจำนวน · Any amount welcome</p>
 
         <p className="support-caption">
           สแกน PromptPay เพื่อสนับสนุน
