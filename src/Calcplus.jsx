@@ -150,22 +150,6 @@ const Calculator = () => {
             />
           </div>
           <div className="calcplus-form-group">
-            <label className="calcplus-label">Medication Type</label>
-            <div className="calcplus-filter-chips">
-              {TYPE_GROUP_KEYS.map(group => (
-                <button
-                  key={group}
-                  type="button"
-                  aria-pressed={typeFilters.includes(group)}
-                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
-                  onClick={() => handleTypeFilterChange(group)}
-                >
-                  {group}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="calcplus-form-group">
             <label htmlFor="medication-select" className="calcplus-label">Select Medication</label>
             <Select
               inputId="medication-select"
@@ -180,6 +164,22 @@ const Calculator = () => {
           <div className="calcplus-button-group">
             <button className="calcplus-btn" onClick={handleCalculate}>Calculate</button>
             <button className="calcplus-btn calcplus-btn-secondary" onClick={handleClearHistory}>Clear</button>
+          </div>
+          <div className="calcplus-filter-section">
+            <label className="calcplus-label">Medication Type</label>
+            <div className="calcplus-filter-chips">
+              {TYPE_GROUP_KEYS.map(group => (
+                <button
+                  key={group}
+                  type="button"
+                  aria-pressed={typeFilters.includes(group)}
+                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
+                  onClick={() => handleTypeFilterChange(group)}
+                >
+                  {group}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="calcplus-affiliate-link">
             <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">

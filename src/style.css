@@ -153,16 +153,16 @@ body {
 }
 
 .calcplus-filter-chip-active {
-  background: #eef2ff;
-  border-color: #6b8afd;
-  color: #4f6ef7;
+  background: #5b7cf7;
+  border-color: #5b7cf7;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .calcplus-filter-chip-active:hover {
-  background: #e0e7ff;
-  border-color: #5b7cf7;
-  color: #4338ca;
+  background: #4a6be6;
+  border-color: #4a6be6;
+  color: #ffffff;
 }
 
 /* ── React Select overrides ───────────────────────────── */
@@ -252,6 +252,13 @@ body {
   background: #f1f5f9;
   border-color: #cbd5e1;
   color: #334155;
+}
+
+/* ── Filter section (demoted, below buttons) ──────────── */
+.calcplus-filter-section {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
 }
 
 /* ── Affiliate link ───────────────────────────────────── */

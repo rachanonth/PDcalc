@@ -213,22 +213,6 @@ const DrugsetCalculator = () => {
       <main className="calcplus-main">
         <section className="calcplus-section calcplus-input-section">
           <div className="calcplus-form-group">
-            <label className="calcplus-label">Medication Type</label>
-            <div className="calcplus-filter-chips">
-              {TYPE_GROUP_KEYS.map(group => (
-                <button
-                  key={group}
-                  type="button"
-                  aria-pressed={typeFilters.includes(group)}
-                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
-                  onClick={() => handleTypeFilterChange(group)}
-                >
-                  {group}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="calcplus-form-group">
             <label htmlFor="medication-select" className="calcplus-label">Select Medications</label>
             <select
               id="medication-select"
@@ -262,6 +246,22 @@ const DrugsetCalculator = () => {
           <div className="calcplus-button-group">
             <button className="calcplus-btn" onClick={calculateDoses}>Calculate</button>
             <button className="calcplus-btn calcplus-btn-secondary" onClick={clearAllData}>Clear All</button>
+          </div>
+          <div className="calcplus-filter-section">
+            <label className="calcplus-label">Medication Type</label>
+            <div className="calcplus-filter-chips">
+              {TYPE_GROUP_KEYS.map(group => (
+                <button
+                  key={group}
+                  type="button"
+                  aria-pressed={typeFilters.includes(group)}
+                  className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
+                  onClick={() => handleTypeFilterChange(group)}
+                >
+                  {group}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="calcplus-affiliate-link">
             <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">
