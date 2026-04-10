@@ -1,17 +1,20 @@
-/* Reset and base styles */
+/* ============================================
+   Peddose — Premium Minimal Design System
+   ============================================ */
+
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f5f7fa;
-  color: #2a4365;
+  background: #fafafa;
+  color: #18181b;
 }
 
 /* App Container */
@@ -19,168 +22,268 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 80px;
+  padding-bottom: 76px;
 }
 
-/* Main app background */
+/* ── Main app background ──────────────────────────────── */
 .calcplus-app-bg {
   min-height: 100vh;
-  background: #f7fafc;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
 }
 
-/* Header Styles */
+/* ── Header ───────────────────────────────────────────── */
 .calcplus-header {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 2rem 1rem;
+  padding: 2.25rem 1.5rem 1.75rem;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .calcplus-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 2.5rem;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.625rem;
   font-weight: 700;
-  color: #2c3e50;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #18181b;
+  letter-spacing: -0.035em;
 }
 
 .calcplus-subtitle {
   margin: 0;
-  font-size: 1.1rem;
-  color: #7f8c8d;
+  font-size: 0.75rem;
+  color: #a1a1aa;
   font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-/* Main content */
+/* ── Main content ─────────────────────────────────────── */
 .calcplus-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px 32px 16px;
+  padding: 20px 16px 32px;
   margin-bottom: 20px;
 }
 
+/* ── Card / Section ───────────────────────────────────── */
 .calcplus-section {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
-  padding: 32px 24px;
-  margin-bottom: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 28px 24px;
+  margin-bottom: 16px;
   width: 100%;
   max-width: 100%;
 }
 
 .calcplus-input-section {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
+/* ── Form elements ────────────────────────────────────── */
 .calcplus-form-group {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.calcplus-form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 .calcplus-label {
   display: block;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.6875rem;
+  font-weight: 600;
   margin-bottom: 8px;
-  color: #2a4365;
+  color: #a1a1aa;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .calcplus-input {
   width: 100%;
-  padding: 10px 12px;
-  font-size: 1.1rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  background: #f7fafc;
-  color: #2a4365;
-  transition: border 0.2s;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1.5px solid #e4e4e7;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #18181b;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
 }
 
 .calcplus-input:focus {
-  border: 1.5px solid #3182ce;
+  border-color: #18181b;
   outline: none;
-  background: #fff;
+  box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.06);
 }
 
+.calcplus-input::placeholder {
+  color: #d4d4d8;
+}
+
+/* ── Filter chips ─────────────────────────────────────── */
+.calcplus-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calcplus-filter-chip {
+  padding: 7px 18px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: 1.5px solid #e4e4e7;
+  border-radius: 100px;
+  background: #ffffff;
+  color: #71717a;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.calcplus-filter-chip:hover {
+  border-color: #a1a1aa;
+  color: #18181b;
+}
+
+.calcplus-filter-chip-active {
+  background: #18181b;
+  border-color: #18181b;
+  color: #ffffff;
+}
+
+.calcplus-filter-chip-active:hover {
+  background: #27272a;
+  border-color: #27272a;
+  color: #ffffff;
+}
+
+/* ── React Select overrides ───────────────────────────── */
 .calcplus-select__control {
-  border-radius: 6px !important;
-  border: 1px solid #cbd5e1 !important;
-  min-height: 44px !important;
-  font-size: 1.1rem !important;
-  background: #f7fafc !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #e4e4e7 !important;
+  min-height: 48px !important;
+  font-size: 0.9375rem !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .calcplus-select__control--is-focused {
-  border-color: #3182ce !important;
-  box-shadow: 0 0 0 1.5px #3182ce !important;
+  border-color: #18181b !important;
+  box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.06) !important;
 }
 
 .calcplus-select__single-value {
-  color: #2a4365 !important;
+  color: #18181b !important;
+  font-weight: 500 !important;
 }
 
+.calcplus-select__placeholder {
+  color: #d4d4d8 !important;
+}
+
+.calcplus-select__menu {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+  overflow: hidden !important;
+}
+
+.calcplus-select__option {
+  font-size: 0.9375rem !important;
+}
+
+.calcplus-select__option--is-focused {
+  background: #f4f4f5 !important;
+}
+
+.calcplus-select__option--is-selected {
+  background: #18181b !important;
+  color: #ffffff !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
 .calcplus-button-group {
   display: flex;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-top: 24px;
 }
 
+.calcplus-btn {
+  flex: 1;
+  background: #18181b;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.01em;
+}
+
+.calcplus-btn:hover {
+  background: #27272a;
+}
+
+.calcplus-btn:active {
+  transform: scale(0.98);
+}
+
+.calcplus-btn-secondary {
+  flex: 0;
+  background: transparent;
+  color: #71717a;
+  border: 1.5px solid #e4e4e7;
+}
+
+.calcplus-btn-secondary:hover {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+  color: #18181b;
+}
+
+/* ── Affiliate link ───────────────────────────────────── */
 .calcplus-affiliate-link {
-  margin-top: 10px;
+  margin-top: 18px;
   text-align: center;
 }
 
 .calcplus-affiliate-link a {
-  font-size: 0.8rem;
-  color: #a0aec0;
+  font-size: 0.6875rem;
+  color: #d4d4d8;
   text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.01em;
 }
 
 .calcplus-affiliate-link a:hover {
-  color: #718096;
-  text-decoration: underline;
+  color: #a1a1aa;
 }
 
-.calcplus-btn {
-  background: #3182ce;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.calcplus-btn:hover {
-  background: #2b6cb0;
-}
-
-.calcplus-btn-secondary {
-  background: #e2e8f0;
-  color: #2a4365;
-}
-
-.calcplus-btn-secondary:hover {
-  background: #cbd5e1;
-}
-
-/* Results section */
+/* ── Results section ──────────────────────────────────── */
 .calcplus-results-section {
-  margin-top: 0;
+  background: transparent;
+  border: none;
+  padding: 4px 0 0;
 }
 
 .calcplus-results-title {
-  font-size: 1.2rem;
+  font-size: 0.6875rem;
   font-weight: 600;
-  color: #2a4365;
-  margin-bottom: 16px;
+  color: #a1a1aa;
+  margin-bottom: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .calcplus-results-list {
@@ -190,19 +293,24 @@ body {
 }
 
 .calcplus-result-card {
-  background: #f7fafc;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
-  padding: 18px 16px 14px 16px;
-  margin-bottom: 18px;
-  border-left: 4px solid #3182ce;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 3px solid #18181b;
+  transition: box-shadow 0.2s ease;
+}
+
+.calcplus-result-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 /* Multi-column grid for Calcpack results */
 .calcplus-results-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: flex-start;
 }
 
@@ -214,15 +322,15 @@ body {
 
 @media (min-width: 600px) {
   .calcplus-results-grid .calcplus-result-card {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 }
 
 @media (min-width: 1024px) {
   .calcplus-results-grid .calcplus-result-card {
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
   }
 }
 
@@ -230,91 +338,94 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .calcplus-result-drug {
   font-weight: 700;
-  color: #2a4365;
-  font-size: 1.08rem;
+  color: #18181b;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
 }
 
 .calcplus-result-weight {
-  color: #4a5568;
-  font-size: 0.98rem;
+  color: #a1a1aa;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .calcplus-result-dose {
-  font-size: 1.18rem;
-  color: #22577a;
-  font-weight: 700;
-  margin-bottom: 8px;
-  background: #e3f2fd;
-  padding: 8px 12px;
-  border-left: 5px solid #3182ce;
-  border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(44, 62, 80, 0.04);
-  margin-top: 6px;
+  font-size: 0.9375rem;
+  color: #18181b;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: #f4f4f5;
+  padding: 10px 14px;
+  border-left: 3px solid #18181b;
+  border-radius: 8px;
+  margin-top: 4px;
+  line-height: 1.5;
 }
 
 .calcplus-result-note {
-  font-size: 0.98rem;
-  color: #4a5568;
+  font-size: 0.8125rem;
+  color: #71717a;
   margin-bottom: 4px;
+  line-height: 1.6;
 }
 
 .calcplus-result-warning {
-  background: #fff3cd;
-  color: #856404;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: 0.98rem;
-  font-weight: 600;
-  margin-top: 4px;
-  border-left: 4px solid #f6c23e;
+  background: #fffbeb;
+  color: #92400e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-top: 8px;
+  border-left: 3px solid #f59e0b;
+  line-height: 1.5;
 }
 
-/* Info Page Styles */
+/* ── Info page ────────────────────────────────────────── */
 .info-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .info-link {
   display: flex;
   align-items: center;
-  padding: 16px;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  color: #2a4365;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  color: #18181b;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease;
-  font-size: 1rem;
+  font-size: 0.9375rem;
+  transition: all 0.15s ease;
 }
 
 .info-link:hover {
-  background: #e3f2fd;
-  border-color: #3182ce;
-  color: #2b6cb0;
+  background: #f4f4f5;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .info-disclaimer {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 8px;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
 }
 
 .info-disclaimer p {
   margin: 0 0 12px 0;
-  color: #856404;
-  line-height: 1.5;
+  color: #92400e;
+  line-height: 1.6;
+  font-size: 0.875rem;
 }
 
 .info-disclaimer p:last-child {
@@ -322,12 +433,13 @@ body {
 }
 
 .info-about {
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .info-about p {
   margin: 0 0 16px 0;
-  color: #2a4365;
+  color: #3f3f46;
+  font-size: 0.9375rem;
 }
 
 .info-features {
@@ -337,96 +449,92 @@ body {
 }
 
 .info-features li {
-  padding: 8px 0;
-  border-bottom: 1px solid #e9ecef;
-  color: #4a5568;
-  font-size: 0.95rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  color: #71717a;
+  font-size: 0.875rem;
 }
 
 .info-features li:last-child {
   border-bottom: none;
 }
 
-/* Responsive design */
+/* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 768px) {
   .calcplus-header {
-    padding: 1.5rem 1rem;
+    padding: 1.75rem 1rem 1.5rem;
   }
-  
+
   .calcplus-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  
-  .calcplus-subtitle {
-    font-size: 1rem;
-  }
-  
+
   .calcplus-section {
-    padding: 18px 6px;
-    max-width: 98vw;
+    padding: 22px 18px;
+    border-radius: 14px;
   }
-  
+
   .calcplus-main {
-    padding: 0 2vw 24px 2vw;
+    padding: 16px 12px 24px;
   }
-  
+
   .info-link {
-    padding: 14px;
-    font-size: 0.95rem;
+    padding: 12px 14px;
+    font-size: 0.875rem;
   }
-  
+
   .info-disclaimer {
     padding: 14px;
   }
-  
+
   .info-features li {
-    font-size: 0.9rem;
+    font-size: 0.8125rem;
   }
 }
 
 @media (max-width: 480px) {
   .calcplus-header {
-    padding: 1rem;
+    padding: 1.5rem 1rem 1.25rem;
   }
-  
+
   .calcplus-title {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
   }
-  
+
   .calcplus-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.6875rem;
   }
-  
+
   .info-link {
-    padding: 12px;
-    font-size: 0.9rem;
-  }
-  
-  .info-disclaimer {
-    padding: 12px;
-  }
-  
-  .info-features li {
-    font-size: 0.85rem;
+    padding: 11px 12px;
+    font-size: 0.8125rem;
   }
 }
 
 @media (min-width: 600px) {
   .calcplus-result-card {
-    max-width: 600px;
+    max-width: 560px;
   }
-  
+
   .calcplus-section {
-    max-width: 700px;
+    max-width: 520px;
+  }
+
+  .calcplus-results-section {
+    max-width: 560px;
   }
 }
 
 @media (min-width: 1024px) {
   .calcplus-result-card {
-    max-width: 800px;
+    max-width: 560px;
   }
-  
+
   .calcplus-section {
-    max-width: 900px;
+    max-width: 520px;
+  }
+
+  .calcplus-results-section {
+    max-width: 560px;
   }
 }
