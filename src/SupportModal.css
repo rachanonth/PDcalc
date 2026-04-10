@@ -1,0 +1,157 @@
+/* ── Overlay ─────────────────────────────────────────── */
+.support-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: support-overlay-in 180ms ease-out;
+}
+
+@keyframes support-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal card ──────────────────────────────────────── */
+.support-modal {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.75rem 1.75rem;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.07),
+    0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: support-modal-in 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes support-modal-in {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Close button ────────────────────────────────────── */
+.support-close {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: #f0f4f8;
+  color: #4a5568;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease;
+}
+
+.support-close:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+/* ── Coffee icon ─────────────────────────────────────── */
+.support-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Title ───────────────────────────────────────────── */
+.support-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin: 0;
+  text-align: center;
+}
+
+.support-subtitle {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── QR wrapper ──────────────────────────────────────── */
+.support-qr-wrapper {
+  margin: 0.75rem 0 0.25rem;
+  padding: 0.75rem;
+  border: 1.5px solid #bee3f8;
+  border-radius: 12px;
+  background: #ebf8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-canvas {
+  display: block;
+  border-radius: 6px;
+}
+
+.support-qr-placeholder {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+/* ── Amount badge ────────────────────────────────────── */
+.support-amount {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+/* ── Captions ────────────────────────────────────────── */
+.support-caption {
+  font-size: 0.78rem;
+  color: #4a5568;
+  text-align: center;
+  line-height: 1.7;
+  margin: 0.25rem 0 0;
+}
+
+.support-caption-en {
+  font-size: 0.72rem;
+  color: #a0aec0;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Divider line ────────────────────────────────────── */
+.support-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #63b3ed);
+  border-radius: 20px 20px 0 0;
+}

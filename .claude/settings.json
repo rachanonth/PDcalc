@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find /Users/kurapika/Documents/GitHub/PDcalc -name *firebase* -o -name .firebase*)"
+      "Bash(find /Users/kurapika/Documents/GitHub/PDcalc -name *firebase* -o -name .firebase*)",
+      "Bash(ls -la /Users/kurapika/Pdcalc/PDcalc/src/*.css)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
     ]
   }
 }
