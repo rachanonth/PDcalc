@@ -1,19 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
 import SupportModal from './SupportModal';
 
+const getInitialTheme = () => {
+  const saved = localStorage.getItem('peddose-theme');
+  if (saved === 'dark' || saved === 'light') return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
 const Navigation = () => {
   const location = useLocation();
-  
+  const [showSupport, setShowSupport] = useState(false);
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('peddose-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
   const navItems = [
     { path: '/', label: 'Peddose', icon: '💊', description: 'Main Calculator' },
     { path: '/calcpack', label: 'Package', icon: '📋', description: 'Multi-Drug Calculator' },
     { path: '/emerdrug', label: 'Emergency', icon: '🚑', description: 'Emergency & ICU Drugs' },
     { path: '/info', label: 'Info', icon: 'ℹ️', description: 'About & Links' }
   ];
-
-  const [showSupport, setShowSupport] = useState(false);
 
   const isActive = (path) => {
     if (path === '/') {
@@ -48,6 +63,18 @@ const Navigation = () => {
             <li className="ios-nav-item" role="none">
               <button
                 className="ios-nav-link ios-nav-support-btn"
+                onClick={toggleTheme}
+                role="menuitem"
+                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+              >
+                <span className="ios-nav-icon" aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
+                <span className="ios-nav-text">{theme === 'dark' ? 'Light' : 'Dark'}</span>
+              </button>
+            </li>
+            <li className="ios-nav-item" role="none">
+              <button
+                className="ios-nav-link ios-nav-support-btn"
                 onClick={() => setShowSupport(true)}
                 role="menuitem"
                 aria-label="สนับสนุนผู้พัฒนา"
@@ -65,4 +92,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

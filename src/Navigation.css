@@ -150,25 +150,23 @@
 }
 
 /* ── Dark mode ────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  .ios-navigation {
-    background: rgba(15, 23, 42, 0.88);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
+[data-theme="dark"] .ios-navigation {
+  background: rgba(15, 23, 42, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
 
-  .ios-nav-link {
-    color: #475569;
-  }
+[data-theme="dark"] .ios-nav-link {
+  color: #475569;
+}
 
-  .ios-nav-link:hover {
-    color: #93a6f8;
-  }
+[data-theme="dark"] .ios-nav-link:hover {
+  color: #a5b4fc;
+}
 
-  .ios-nav-link-active {
-    color: #93a6f8;
-  }
+[data-theme="dark"] .ios-nav-link-active {
+  color: #a5b4fc;
+}
 
-  .ios-nav-indicator {
-    background: #93a6f8;
-  }
+[data-theme="dark"] .ios-nav-indicator {
+  background: #a5b4fc;
 }
