@@ -129,12 +129,7 @@ const Calculator = () => {
   const handleClearHistory = () => setResultHistory([]);
 
   const handleCopy = (result, index) => {
-    const text = [
-      `${result.drugname} (wt ${result.weight} kg)`,
-      result.line1,
-      result.line2,
-      result.ref ? `ref: ${result.ref}` : '',
-    ].filter(Boolean).join('\n');
+    const text = `${result.drugname} (wt ${result.weight} kg)\n${result.line1}`;
 
     navigator.clipboard.writeText(text).then(() => {
       setCopiedIndex(index);
