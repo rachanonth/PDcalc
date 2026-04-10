@@ -39,6 +39,16 @@ const Navigation = () => {
 
   return (
     <>
+      {/* Theme toggle — fixed top-right */}
+      <button
+        className="theme-toggle"
+        onClick={toggleTheme}
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+      >
+        {theme === 'dark' ? '☀️' : '🌙'}
+      </button>
+
       <nav className="ios-navigation" role="navigation" aria-label="Main navigation">
         <div className="ios-nav-container">
           <ul className="ios-nav-list" role="menubar">
@@ -60,18 +70,6 @@ const Navigation = () => {
                 </Link>
               </li>
             ))}
-            <li className="ios-nav-item" role="none">
-              <button
-                className="ios-nav-link ios-nav-support-btn"
-                onClick={toggleTheme}
-                role="menuitem"
-                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-                title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-              >
-                <span className="ios-nav-icon" aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
-                <span className="ios-nav-text">{theme === 'dark' ? 'Light' : 'Dark'}</span>
-              </button>
-            </li>
             <li className="ios-nav-item" role="none">
               <button
                 className="ios-nav-link ios-nav-support-btn"
