@@ -156,6 +156,7 @@ const Calculator = () => {
                 <button
                   key={group}
                   type="button"
+                  aria-pressed={typeFilters.includes(group)}
                   className={`calcplus-filter-chip${typeFilters.includes(group) ? ' calcplus-filter-chip-active' : ''}`}
                   onClick={() => handleTypeFilterChange(group)}
                 >
