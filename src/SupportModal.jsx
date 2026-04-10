@@ -60,7 +60,7 @@ const SupportModal = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        <p className="support-amount">ยินดีรับทุกจำนวน · Any amount welcome</p>
+        <p className="support-amount">Any amount welcome</p>
 
         <p className="support-caption">
           สแกน PromptPay เพื่อสนับสนุน
