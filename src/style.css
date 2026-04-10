@@ -308,11 +308,19 @@ body {
   margin-bottom: 10px;
   border: 1px solid #f1f5f9;
   border-left: 3px solid #6b8afd;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, background 0.15s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .calcplus-result-card:hover {
-  box-shadow: 0 4px 16px rgba(107, 138, 253, 0.06);
+  box-shadow: 0 4px 16px rgba(107, 138, 253, 0.08);
+  background: #fafbff;
+}
+
+.calcplus-result-card:active {
+  background: #f0f4ff;
 }
 
 /* Multi-column grid for Calcpack results */
@@ -361,6 +369,12 @@ body {
   color: #94a3b8;
   font-size: 0.75rem;
   font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.calcplus-result-weight.copied {
+  color: #5b7cf7;
+  font-weight: 600;
 }
 
 .calcplus-result-dose {

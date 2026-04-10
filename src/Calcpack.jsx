@@ -9,7 +9,7 @@ const TYPE_GROUPS = {
 const TYPE_GROUP_KEYS = Object.keys(TYPE_GROUPS);
 const FILTER_STORAGE_KEY = 'calcpack_typeFilters';
 const MEDICATIONS_STORAGE_KEY = 'calcpack_selectedMedications';
-const WEIGHT_STORAGE_KEY = 'calcpack_weight';
+const WEIGHT_STORAGE_KEY = 'peddose_weight';
 
 const getDeviceColumns = () => {
   if (window.innerWidth < 600) return 1; // mobile
