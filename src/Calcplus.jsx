@@ -204,8 +204,8 @@ const Calculator = () => {
             </div>
           </div>
           <div className="calcplus-affiliate-link">
-            <a href="https://s.shopee.co.th/4LEsXaEIAX" target="_blank" rel="noopener noreferrer">
-              📚 หนังสือคู่มือการใช้ยาในเด็ก
+            <a href="https://collshp.com/peddose" target="_blank" rel="noopener noreferrer">
+              🖥️ ของดีบนโต๊ะเรา
             </a>
           </div>
         </section>
