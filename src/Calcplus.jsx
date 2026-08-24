@@ -205,7 +205,7 @@ const Calculator = () => {
           </div>
           <div className="calcplus-affiliate-link">
             <a href="https://collshp.com/peddose" target="_blank" rel="noopener noreferrer">
-              🖥️ ของดีบนโต๊ะเรา
+              🖥️ My Desk Picks
             </a>
           </div>
         </section>
