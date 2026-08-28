@@ -206,8 +206,11 @@ const Calculator = () => {
           <div className="calcplus-affiliate-link">
             <a href="https://collshp.com/peddose" target="_blank" rel="noopener noreferrer">
               🖥️ My Desk Picks
-            </a> |  <a href="https://s.shopee.co.th/5As2ARM2iS" target="_blank" rel="noopener noreferrer">
-              📚 คู่มือการใช้ยาในเด็ก | <a href="https://s.shopee.co.th/9pdrjAeNQ4" target="_blank" rel="noopener noreferrer">
+            </a> 
+            | <a href="https://s.shopee.co.th/5As2ARM2iS" target="_blank" rel="noopener noreferrer">
+              📚 คู่มือการใช้ยาในเด็ก 
+             </a>  
+              | <a href="https://s.shopee.co.th/9pdrjAeNQ4" target="_blank" rel="noopener noreferrer">
               MIMS Pharmacy Thailand 2026 | 
             </a> 
           </div>
